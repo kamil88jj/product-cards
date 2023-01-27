@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,600;1,500&display=swap');
+
+body {
+margin: 0;
+font-family: 'Noto Sans', sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+background-color: #ffffff00;
+}
+
+* {
+box-sizing: border-box;
+}
+
+.App {
+    padding: 10px;
+    width: 1300;
+    max-width: 1600px;
+}
+
+.title{
+    font-family: 'Noto Sans';
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 23px;
+    color:  #344050;
+}
+
+.sorting {
+    font-family: 'Noto Sans';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #4D5969;
+}
+
+.tags {
+list-style: none;
+padding: 0;
+
+li {
+    display: inline-block;
+    padding: 5px 8px;
+    color: #2A7BE4;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    border: 1px solid transparent;
+    transition: all 0.15s ease-in-out;
+    & img {
+        padding: 0 2px 0 0;
+    }
+    &:hover {
+    border-color: #000;
+    }
+
+    &.active {
+    color:  #344050;
+    }
+}
+}
+
+.content {
+    display: block;
+    margin-top: 40px;
+    width: 1215px;
+    height: 600px;
+    h3 {
+        display: block;
+        font-weight: 600;
+        font-size: 40px;
+        width: 200px;
+        color: #34405069;
+        margin: 20px 45%;
+    }
+
+
+&__title {
+    display: grid;
+    grid-template-columns: 100px 590px 1fr 1fr 120px;
+    grid-column-gap: 10px;
+    height: 35px;
+    margin-bottom: 0px;
+    background-color: #EDF2F8;
+    li {
+        width: 100%;
+        font-weight: 600;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        color: #4D5969;
+    }
+    
+}
+
+
+}
+
+.collection {
+    display: block;
+    width: 100%;
+    &__table {
+        width: 100%;
+    }
+
+&__products {
+    display: grid;
+    grid-template-columns: 100px 580px 160px 160px 150px;
+    grid-column-gap: 15px;
+    padding: 15px 0;
+
+    img {
+        margin-left: 30px;
+        width: 60px;
+        height: 40px;
+        border-radius: 3px;
+    }
+}
+
+&__subtitle {
+    margin: 0 30px;
+    width: 550px;
+    height: 16px; 
+    cursor: pointer;
+    &-name {
+        font-family: 'Noto Sans';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 0;
+        color: #4D5969;
+    }
+    &-category {
+        font-weight: 400;
+        font-size: 13px;
+        color: #9DA8BA;
+    }
+}
+
+&__block {
+    h1 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-weight: 500;
+        margin-right: 10px;
+        font-size: 14px;
+        line-height: 13px;
+        color: #4D5969;
+    }
+    
+}
+
+h4 {
+    margin: 0;
+    margin-top: 15px;
+    font-size: 20px;
+    font-family: 'Merriweather', serif;
+}
+
+
+img {
+    object-fit: cover;
+}
+
+
+&__bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+&__mini {
+    width: 31%;
+    height: 80px;
+    border-radius: 20px;
+}
+}
+
+.top {
+    display: flex;
+    align-items: center;
+width: 1300px;
+flex-wrap: wrap;
+}
+
+.search {
+    position: relative;
+    display: block;
+}
+
+.search-icon {
+    position: absolute;
+    transform: translateX(-310px);
+    top: 9px;
+}
+
+.search-input {
+    width: 320px;
+    font-style: normal;
+    font-weight: 500;
+    color: #252526;
+    font-size: 16px;
+    margin-left: 135px;
+    height: 36px;
+    padding: 0 29px;
+    border-radius: 18px;
+    border: 1px solid rgba(103, 102, 102, 0.2);
+    outline: none;
+    &::placeholder{
+        color:  #B6C2D2;
+    }
+&:focus {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+}
+}
+
+
+.pagination {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+
+li {
+    width: 36px;
+    height: 32px;
+    display: inline-block;
+    padding: 8px 13px;
+    background-color: white;
+    font-size: 16px;        
+    line-height: 16px;
+    border-radius: 2px;
+    margin-right: 8px;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 1px 1.5px rgba(0, 0, 0, 0.07), 0px 2px 5px rgba(43, 45, 80, 0.08), 0px 0px 0px 1px rgba(43, 45, 80, 0.1);
+
+    &.active {
+    color: #2A7BE4;
+    }
+}
+}
+
+    @media screen and (max-width: 1000px) {
+        .top{
+            width: 100%;
+        }
+        .search-input {
+            margin-left: 0px;
+        }
+        .content{
+            width: 100%;
+        }
+    }
